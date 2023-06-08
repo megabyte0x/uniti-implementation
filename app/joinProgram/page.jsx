@@ -1,8 +1,12 @@
 import React from 'react'
+import Program from './components/Program'
 
 const JoinProgramPage = () => {
     return (
-        <div>JoinProgramPage</div>
+        <div>
+            JoinProgramPage
+            <Program />
+        </div>
     )
 }
 
