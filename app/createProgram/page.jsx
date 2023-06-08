@@ -3,6 +3,7 @@ import ProgramForm from './components/ProgramForm'
 import WhiteList from './components/WhiteList'
 import ConfirmAddresses from './components/ConfirmAddresses'
 import Link from 'next/link'
+import { useStore } from '../store'
 
 const CreateProgramPage = () => {
     return (

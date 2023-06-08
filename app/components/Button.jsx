@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-const Button = ({ className, text, link }) => {
+const Button = ({ text, link }) => {
     return (
         <div>
             <Link href={link ? link : './'}>
