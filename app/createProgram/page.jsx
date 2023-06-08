@@ -1,8 +1,16 @@
 import React from 'react'
+import ProgramForm from './components/ProgramForm'
+import WhiteList from './components/WhiteList'
+import ConfirmAddresses from './components/ConfirmAddresses'
+import Link from 'next/link'
 
 const CreateProgramPage = () => {
     return (
-        <div>CreateProgramPage</div>
+        <div>
+            <ProgramForm />
+            <WhiteList />
+            <ConfirmAddresses />
+        </div>
     )
 }
 
