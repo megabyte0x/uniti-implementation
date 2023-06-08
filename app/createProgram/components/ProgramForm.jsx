@@ -17,6 +17,7 @@ const ProgramForm = () => {
 
     const addProgram = useStore((store) => store.addProgram);
     const changeVis = useStore((store) => store.changeVis);
+    const changeCurrentProgram = useStore((store) => store.changeCurrentProgram);
     // console.log(name);
     // const programs = useStore((store) => store.programs);
     // console.log(programs);
@@ -36,6 +37,7 @@ const ProgramForm = () => {
             </form>
             <button onClick={() => {
                 addProgram(name, description);
+                changeCurrentProgram(name);
                 changeVis(2);
             }}>
                 Create</button>
