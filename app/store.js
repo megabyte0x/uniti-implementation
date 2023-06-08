@@ -29,6 +29,9 @@ const store =
         whitelists: [{ program: "Polygon Advocates", whitelist: 'yash, ayush, manishi, taveesha' }],
         addWhitelist: (program, whitelist) =>
             set((store) => ({ whitelists: [...store.whitelists, { program, whitelist }] })),
+        campaigns: [{ program: "Polygon Advocates", campaignName: "Quest", nftName: "Kurioai", nftAmount: 10, nftDescription: "this is a description for kurioai nft sample", guidelines: "this is sample guidelines for the submission of kurioai nft and how to blah blah" }, { program: "Polygon Advocates", campaignName: "Quest2", nftName: "Goku", nftAmount: 10, nftDescription: "this is a description for goku nft sample", guidelines: "this is sample guidelines for the submission of goku nft and how to blah blah" }],
+        addCampaign: (currentProgram, campaignName, nftName, nftAmount, nftDescription, guidelines) =>
+            set((store) => ({ campaigns: [...store.campaigns, { program: currentProgram, campaignName, nftName, nftAmount, nftDescription, guidelines }] })),
         currentProgram: 'Polygon Advocates',
         changeCurrentProgram: (name) =>
             set((store) => ({ currentProgram: name }))

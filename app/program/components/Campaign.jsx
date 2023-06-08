@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 
-const campaign = ({ link }) => {
+const campaign = ({ campaign }) => {
     return (
-        <Link href={link}>
+        <Link href="#">
             <div>
-                campaign
+                <h2>{campaign.campaignName}</h2>
             </div>
         </Link>
     )
