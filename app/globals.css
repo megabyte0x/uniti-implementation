@@ -8,10 +8,10 @@ body {
 
 @layer components {
   .connect-btn {
-    @apply px-5 py-3 bg-[#FF90E8] rounded-[20px] shadow-[5px_4px_0px_#000000] mr-[40px] uppercase;
+    @apply py-3 bg-[#FF90E8] w-[200px] rounded-[20px] shadow-[5px_4px_0px_#000000] mr-[40px] uppercase;
   }
 
   .mainpage-btn {
-    @apply px-5 py-3 bg-[#F4F4F0] flex justify-center items-center rounded-[17px] shadow-[5px_4px_0px_#000000] mt-11 text-[25px];
+    @apply py-3 bg-[#F4F4F0] w-[293px] flex justify-center items-center rounded-[17px] shadow-[5px_4px_0px_#000000] mt-11 text-[25px];
   }
 }
