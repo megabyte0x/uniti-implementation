@@ -16,15 +16,15 @@ export default function RootLayout({ children }) {
     return (
       <html lang="en">
         <body className={inter.className}>
-          <div className="flex items-center justify-between">
+          <div className="flex justify-between">
             <img
               src="./logo.png"
               alt=""
-              className="w-[100px] h-[100px] ml-5 mt-4"
+              className="w-[150px] h-[150px] ml-5 mt-4"
             />
             <Button
               text="Connect Wallet"
-              btnName={"connect-btn"}
+              btnName={"connect-btn mt-9 border-black border rounded-xl text-lg"}
             />
           </div>
           {children}

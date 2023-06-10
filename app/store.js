@@ -52,7 +52,7 @@ const store =
     whitelists: [
       {
         program: "Polygon Advocates",
-        whitelist: "yash, ayush, manishi, taveesha",
+        whitelist: "yash, ayush, 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa, manishi, taveesha",
       },
     ],
     addWhitelist: (program, whitelist) =>
