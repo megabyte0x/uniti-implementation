@@ -11,9 +11,9 @@ const CreateCampaignPage = () => {
   const [guidelines, setGuidelines] = useState("");
 
   const addCampaign = useStore((store) => store.addCampaign);
-  const campaigns = useStore((store) => store.campaigns);
+  // const campaigns = useStore((store) => store.campaigns);
 
-  console.log(campaigns);
+  // console.log(campaigns);
 
   return (
     <div>
