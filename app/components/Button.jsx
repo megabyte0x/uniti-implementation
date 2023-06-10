@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { JetBrains_Mono } from "next/font/google";
 
-const jetBrains = JetBrains_Mono({ weight: ["700"], subsets: ["cyrillic"] });
+const jetBrains = JetBrains_Mono({ weight: ["600"], subsets: ["cyrillic"] });
 
 const Button = ({ text, link, btnName }) => {
   return (
