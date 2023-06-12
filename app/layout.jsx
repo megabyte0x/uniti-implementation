@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             />
             <Button
               text="Connect Wallet"
-              btnName={"connect-btn mt-9 border-black border rounded-xl text-lg"}
+              btnName={"hover:shadow-[18px_12px_0px_#000000] connect-btn mt-9 border-black border rounded-xl text-lg"}
             />
           </div>
           {children}
