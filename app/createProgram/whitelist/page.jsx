@@ -39,7 +39,7 @@ const WhitelistPage = () => {
                     <button
                         className="bg-[#7dea95] px-6 py-3 mt-[36px]
                 text-2xl 
-                border-black border-2 rounded-[18px] shadow-[4px_4px_0px_#000000] "
+                border-black border-2 rounded-[18px] hover:shadow-[8px_8px_0px_#000000] shadow-[4px_4px_0px_#000000]"
                         onClick={() => {
                             addWhitelist(currentProgram, whitelist);
                         }}

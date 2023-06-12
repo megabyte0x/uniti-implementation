@@ -18,7 +18,7 @@ const program = ({ name, description }) => {
       <div className="grid grid-cols-5
                         w-[57%] h-[180px] p-0
                         bg-[#f4f4f0] border-black border-2 rounded-xl
-                        shadow-[9px_9px_0px_#000000] ml-[150px]">
+                        hover:shadow-[18px_18px_0px_#000000] shadow-[9px_9px_0px_#000000] ml-[150px] mb-[24px]">
         {/* jugaad on centering using margin*/}
         <div className=" p-[9px] py-[24px] text-sm col-span-3">
           <h2 className="text-lg leading-none mb-[6px]"><span className={raleway.className}>{name} Program</span></h2>

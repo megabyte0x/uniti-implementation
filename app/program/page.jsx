@@ -31,14 +31,14 @@ const ProgramPage = () => {
     shadow-[18px_18px_0px_#000000]">
         <div className="flex flex-col items-center justify-evenly text-center h-full w-full col-span-7 border-black border-t-2 border-r-2">
           <h1 className="text-[33px] place-self-center"><span className={raleway.className}>{program[0].programName} Program</span></h1>
-          <p className="w-[75%] text-lg"><span className={ralewayp.className}>{program[0].programDescription}</span></p>
+          <p className="w-[75%] text-lg"><span className={ralewayp.className}>{program[0].programDescription.slice(0, 150)}...</span></p>
           <div className="border-black border-2 flex flex-col items-center justify-center h-[165px] w-[165px] bg-[#11a198] rounded-[9px]">
             <h1 className={jetBrains.className}><span className="outline-title font-bold text-[57px]">NFT</span></h1>
           </div>
         </div>
         <div className="flex flex-col items-center justify-evenly h-full w-full col-span-3 border-black border-t-2">
           {campaigns.map((campaign) => (
-            <div className="bg-[#ffffff] h-full w-[66%] my-[15px] border-black border-2 rounded-[12px]">
+            <div className="bg-[#ffffff] h-[50%] w-[66%] my-[15px] hover:shadow-[8px_8px_0px_#000000] border-black border-2 rounded-[12px]">
               <Campaign campaign={campaign} />
             </div>
           ))}
@@ -47,7 +47,7 @@ const ProgramPage = () => {
       </div>
       <Button btnName="bg-[#7dea95] px-3 py-3 mt-[36px]
                 text-lg 
-                border-black border-2 rounded-[18px] shadow-[4px_4px_0px_#000000]" text="Create Campaigns" link="../program/createCampaign" />
+                border-black border-2 rounded-[18px] hover:shadow-[8px_8px_0px_#000000] shadow-[4px_4px_0px_#000000]" text="Create Campaigns" link="../program/createCampaign" />
     </div>
   );
 };

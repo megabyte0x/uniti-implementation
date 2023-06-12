@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useStore } from "@/app/store";
 import { JetBrains_Mono } from "next/font/google";
+import Link from "next/link";
 
 const jetBrains = JetBrains_Mono({ weight: ["500"], subsets: ["cyrillic"] });
 
@@ -77,24 +78,26 @@ const CreateCampaignPage = () => {
           />
         </form>
       </div>
-      <button
-        onClick={() => {
-          addCampaign(
-            currentProgram,
-            campaignName,
-            nftName,
-            nftAmount,
-            nftDescription,
-            guidelines
-          );
-        }}
-        className="bg-[#7dea95] px-6 py-3 mt-[36px]
+      <Link href="./program">
+        <button
+          onClick={() => {
+            addCampaign(
+              currentProgram,
+              campaignName,
+              nftName,
+              nftAmount,
+              nftDescription,
+              guidelines
+            );
+          }}
+          className="bg-[#7dea95] px-6 py-3 mt-[36px]
         text-2xl 
         border-black border-2 rounded-[18px] shadow-[4px_4px_0px_#000000]"
-      >
+        >
 
-        <span className={jetBrains.className}>Create</span>
-      </button>
+          <span className={jetBrains.className}>Create</span>
+        </button>
+      </Link>
     </div>
   );
 };
