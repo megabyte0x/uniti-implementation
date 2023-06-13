@@ -36,8 +36,7 @@ const CreateProgramPage = () => {
                           rounded-md border-black border-2 shadow-[0px_4px_0px_#d7d7d7]"
             />
             <label htmlFor="" className="w-full text-left"><span className={jetBrains.className}>Description</span></label>
-            <input
-              type="textarea"
+            <textarea
               onChange={(e) => setDescription(e.target.value)}
               value={description}
               className="h-36 w-full p-3 rounded-md border-black border-2 mt-2 mb-3 shadow-[0px_4px_0px_#d7d7d7]"

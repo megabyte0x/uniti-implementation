@@ -25,8 +25,7 @@ const WhitelistPage = () => {
                             <span className="text-sm leading-none m-0 p-0">Please paste a string comprising of all the addresses</span>
                         </span>
                     </label>
-                    <input
-                        type="textarea"
+                    <textarea
                         name=""
                         id=""
                         onChange={(e) => setWhitelist(e.target.value)}

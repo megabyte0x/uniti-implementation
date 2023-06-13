@@ -55,8 +55,7 @@ const CreateCampaignPage = () => {
                   value={nftAmount}
                   className="h-[15px] w-[90%] text-[15px] py-[9px] border-b-[1px] border-black"
                 />
-                <input
-                  type="textarea"
+                <textarea
                   placeholder="Description"
                   onChange={(e) => setNftDescription(e.target.value)}
                   value={nftDescription}
