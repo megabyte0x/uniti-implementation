@@ -75,6 +75,13 @@ const CreateProgramPage = () => {
           </button>
         </Link>
       </div>
+      <div className="pl-[45px] text-2xl -mt-[30px]">
+        <Link href="./">
+          <h1
+            className={jetBrains.className}
+          >&lt; Back</h1>
+        </Link>
+      </div>
     </div>
   );
 };
