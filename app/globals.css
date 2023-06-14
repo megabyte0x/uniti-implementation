@@ -14,6 +14,9 @@ body {
   .mainpage-btn {
     @apply py-3 bg-[#F4F4F0] w-[293px] flex justify-center items-center rounded-[17px] shadow-[9px_8px_0px_#000000] mt-11 text-[25px];
   }
+  .green-btn {
+    @apply bg-[#7dea95] px-3 py-3 mt-8 text-lg border-black border-2 rounded-[18px] hover:shadow-[8px_8px_0px_#000000] shadow-[4px_4px_0px_#000000];
+  }
 }
 
 .hide {
