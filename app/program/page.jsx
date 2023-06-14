@@ -30,9 +30,9 @@ const ProgramPage = () => {
               {program[0].programName} Program
             </span>
           </h1>
-          <p className="w-[75%] text-lg">
+          <p className="w-[81%] text-lg leading-none">
             <span className={ralewayp.className}>
-              {program[0].programDescription.slice(0, 150)}...
+              {program[0].programDescription.slice(0, 300)}...
             </span>
           </p>
           <div className="border-black border-2 flex flex-col items-center justify-center h-[165px] w-[165px] bg-[#11a198] rounded-[9px]">

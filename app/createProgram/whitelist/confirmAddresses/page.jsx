@@ -12,7 +12,7 @@ const ConfirmAddressesPage = () => {
   const unsplitWhitelist = useStore((store) =>
     store.whitelists.filter((whitelist) => whitelist.program == currentProgram)
   );
-  const splitWhitelist = unsplitWhitelist[0].whitelist.split(", ");
+  const splitWhitelist = unsplitWhitelist[0].whitelist.split(",");
   return (
     <div>
       <div className="flex flex-col items-center justify-center text-center">
