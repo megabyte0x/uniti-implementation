@@ -12,6 +12,7 @@ const jetBrains = JetBrains_Mono({ weight: ["500"], subsets: ["cyrillic"] });
 const CreateProgramPage = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [image, setImage] = useState();
 
   const addProgram = useStore((store) => store.addProgram);
   const changeCurrentProgram = useStore((store) => store.changeCurrentProgram);
@@ -55,7 +56,8 @@ const CreateProgramPage = () => {
             <input
               type="file"
               name="Upload"
-              className={`${jetBrains.className} ml-20`}
+              className={`${jetBrains.className}`}
+              onChange={(e) => setImage(e.target.files[0])}
               id=""
             />
           </div>
@@ -65,7 +67,7 @@ const CreateProgramPage = () => {
           <button
             className={"green-btn"}
             onClick={() => {
-              addProgram(name, description);
+              addProgram(name, description, image);
               changeCurrentProgram(name);
             }}
           >
@@ -75,9 +77,7 @@ const CreateProgramPage = () => {
       </div>
       <div className="pl-[45px] text-2xl -mt-[30px]">
         <Link href="./">
-          <h1
-            className={jetBrains.className}
-          >&lt; Back</h1>
+          <h1 className={jetBrains.className}>&lt; Back</h1>
         </Link>
       </div>
     </div>

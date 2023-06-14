@@ -27,25 +27,22 @@ const ConfirmAddressesPage = () => {
             className="w-full h-fit p-[39px]
                         text-[15px] list-decimal
                         flex flex-col items-start justify-top  
-                        bg-[#ffffff] border-black border-2 rounded-3xl">
+                        bg-[#ffffff] border-black border-2 rounded-3xl"
+          >
             {splitWhitelist.map((address) => (
               <li className={jetBrains.className}>{address}</li>
             ))}
           </ol>
         </div>
-        <Button text="Confirm" link="../../../program" btnName="bg-[#7dea95] px-6 py-3 mt-[36px]
-                text-2xl 
-                border-black border-2 rounded-[18px] hover:shadow-[8px_8px_0px_#000000] shadow-[4px_4px_0px_#000000] mb-[24px] "/>
+        <Button text="Confirm" link="../../../program" btnName={"green-btn"} />
       </div>
       <div className="pl-[45px] text-2xl -mt-[30px]">
         <Link href="./createProgram/whitelist">
-          <h1
-            className={jetBrains.className}
-          >&lt; Back</h1>
+          <h1 className={jetBrains.className}>&lt; Back</h1>
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ConfirmAddressesPage;

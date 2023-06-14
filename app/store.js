@@ -27,15 +27,17 @@ const store =
         programName: "Polygon Advocates",
         programDescription:
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        programImage: "/Logo.png",
         whitelisted: "",
       },
       {
         programName: "Polygon Leads",
         programDescription: "m erdtyjfukg ytdjydj",
+        programImage: "/frontImg.png",
         whitelisted: "",
       },
     ],
-    addProgram: (programName, programDescription) =>
+    addProgram: (programName, programDescription, programImage) =>
       set(
         (store) => ({
           programs: [
@@ -43,6 +45,7 @@ const store =
             {
               programName: programName,
               programDescription: programDescription,
+              programImage: programImage,
               campaigns: [],
             },
           ],
@@ -68,6 +71,7 @@ const store =
         nftName: "Kurioai",
         nftAmount: 10,
         nftDescription: "this is a description for kurioai nft sample",
+        nftImage: '/ethglobal.jpeg',
         guidelines:
           "this is sample guidelines for the submission of kurioai nft and how to blah blah",
       },
@@ -77,6 +81,7 @@ const store =
         nftName: "Goku",
         nftAmount: 10,
         nftDescription: "this is a description for goku nft sample",
+        nftImage: '/ethglobal.jpeg',
         guidelines:
           "this is sample guidelines for the submission of goku nft and how to blah blah",
       },
@@ -87,6 +92,7 @@ const store =
       nftName,
       nftAmount,
       nftDescription,
+      nftImage,
       guidelines
     ) =>
       set((store) => ({
@@ -98,6 +104,7 @@ const store =
             nftName,
             nftAmount,
             nftDescription,
+            nftImage,
             guidelines,
           },
         ],

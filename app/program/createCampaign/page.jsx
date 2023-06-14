@@ -11,6 +11,7 @@ const CreateCampaignPage = () => {
   const [campaignName, setCampaignName] = useState("");
   const [nftName, setNftName] = useState("");
   const [nftAmount, setNftAmount] = useState();
+  const [nftImage, setNftImage] = useState();
   const [nftDescription, setNftDescription] = useState("");
   const [guidelines, setGuidelines] = useState("");
 
@@ -78,6 +79,7 @@ const CreateCampaignPage = () => {
                 type="file"
                 name=""
                 id=""
+                onChange={(e) => setNftImage(e.target.files[0])}
                 className="text-[15px] border-black border-2 flex flex-col items-end justify-center h-full w-[110px] bg-[#11a198] rounded-[9px]"
               />
             </div>
@@ -105,6 +107,7 @@ const CreateCampaignPage = () => {
               nftName,
               nftAmount,
               nftDescription,
+              nftImage,
               guidelines
             );
           }}
