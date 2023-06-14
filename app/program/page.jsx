@@ -37,7 +37,9 @@ const ProgramPage = () => {
           </p>
           <div className="border-black border-2 flex flex-col items-center justify-center h-[165px] w-[165px] bg-[#11a198] rounded-[9px]">
             <h1 className={jetBrains.className}>
-              <span className="outline-title font-bold text-[57px]">NFT</span>
+              <span className="outline-title font-bold text-[57px]">
+                <img src={program[0].programImage[0]} alt="" />
+              </span>
             </h1>
           </div>
         </div>
