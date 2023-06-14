@@ -27,17 +27,15 @@ const store =
         programName: "Polygon Advocates",
         programDescription:
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        programImage: "./Logo.png",
         whitelisted: "",
       },
       {
         programName: "Polygon Leads",
         programDescription: "m erdtyjfukg ytdjydj",
-        programImage: "./Logo.png",
         whitelisted: "",
       },
     ],
-    addProgram: (programName, programDescription, programImage) =>
+    addProgram: (programName, programDescription) =>
       set(
         (store) => ({
           programs: [
@@ -45,7 +43,6 @@ const store =
             {
               programName: programName,
               programDescription: programDescription,
-              programImage: programImage,
               campaigns: [],
             },
           ],
