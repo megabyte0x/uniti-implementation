@@ -1,9 +1,14 @@
+"use client";
 import Button from "./components/Button";
 import { Raleway } from "next/font/google";
+import { useStore } from "./store";
 
 const raleway = Raleway({ subsets: ["cyrillic"] });
 
 export default function Home() {
+  const changeCurrentProgram = useStore((store) => store.changeCurrentProgram);
+
+
   return (
     <>
       <div className="flex flex-col items-center justify-center text-center mt-1 w-full">
@@ -26,6 +31,9 @@ export default function Home() {
             text="Create Program"
             link="../createProgram"
             btnName={"hover:shadow-[18px_18px_0px_#000000] mainpage-btn h-20 w-60 border-black border-2 rounded-xl"}
+            onClick={() => {
+              changeCurrentProgram('');
+            }}
           />
         </div>
         <img src="./frontImg.png" alt="" className="w-72 absolute left-5 bottom-6" />

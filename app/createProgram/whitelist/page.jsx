@@ -7,9 +7,11 @@ import { JetBrains_Mono } from "next/font/google";
 const jetBrains = JetBrains_Mono({ weight: ["500"], subsets: ["cyrillic"] });
 
 const WhitelistPage = () => {
+
   const [whitelist, setWhitelist] = useState("");
   const currentProgram = useStore((store) => store.currentProgram);
   const addWhitelist = useStore((store) => store.addWhitelist);
+  const changeCurrentProgram = useStore((store) => store.changeCurrentProgram);
 
   return (
     <div>
@@ -20,14 +22,11 @@ const WhitelistPage = () => {
                         text-2xl
                         flex flex-col items-center justify-center  
                         bg-[#f4f4f0] border-black border-2 rounded-3xl
-                        shadow-[18px_18px_0px_#000000]"
-        >
-          <label htmlFor="" className="mx-0 p-0 leading-none my-[24px]">
-            <span className={jetBrains.className}>
-              Receipiants Wallet Addressess{" "}
-              <span className="text-sm leading-none m-0 p-0">
-                Please paste a string comprising of all the addresses
-              </span>
+                        shadow-[18px_18px_0px_#000000]">
+          <label htmlFor=""
+            className="mx-0 p-0 leading-none my-[24px]">
+            <span className={jetBrains.className}>Receipiants Wallet Addressess{" "}
+              <span className="text-sm leading-none m-0 p-0">Please paste a string comprising of all the addresses</span>
             </span>
           </label>
           <textarea
@@ -41,7 +40,9 @@ const WhitelistPage = () => {
         </form>
         <Link href="./createProgram/whitelist/confirmAddresses">
           <button
-            className={"green-btn"}
+            className="bg-[#7dea95] px-6 py-3 mt-[36px]
+                text-2xl 
+                border-black border-2 rounded-[18px] hover:shadow-[8px_8px_0px_#000000] shadow-[4px_4px_0px_#000000]"
             onClick={() => {
               addWhitelist(currentProgram, whitelist);
             }}
@@ -50,8 +51,18 @@ const WhitelistPage = () => {
           </button>
         </Link>
       </div>
+      <div className="pl-[45px] text-2xl -mt-[30px]">
+        <Link href="./createProgram">
+          <h1
+            className={jetBrains.className}
+            onClick={() => {
+              changeCurrentProgram('');
+            }}
+          >&lt; Back</h1>
+        </Link>
+      </div>
     </div>
-  );
-};
+  )
+}
 
 export default WhitelistPage;
