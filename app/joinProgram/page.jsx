@@ -13,7 +13,7 @@ const JoinProgramPage = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <h1 className="text-3xl mb-[27px]"><span className={raleway.className}>Programs</span></h1>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 justify-center items-center">
         {programs.map((program) => (
           <Program
             name={program.programName}
