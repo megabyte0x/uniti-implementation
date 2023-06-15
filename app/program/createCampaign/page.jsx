@@ -74,7 +74,7 @@ const CreateCampaignPage = () => {
                 />
               </div>
             </div>
-            <label className="flex h-24 w-25 cursor-pointer items-center justify-center gap-1 rounded-lg text-center text-sm text-black bg-[#11a198]">
+            <label className="flex h-24 w-25 cursor-pointer items-center justify-center gap-1 rounded-lg text-center text-md text-black bg-[#11a198]">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
