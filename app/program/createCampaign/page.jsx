@@ -47,11 +47,11 @@ const CreateCampaignPage = () => {
           </label>
           <form
             action=""
-            className="grid grid-cols-3 h-auto w-full px-3 pb-[30px] pt-[3px] mt-[3px] mb-3 bg-[#ffffff]
+            className="grid grid-cols-3 h-auto w-full px-3 pb-[17px] pt-[15px] mt-[3px] mb-3 bg-[#ffffff]
                           rounded-md border-black border-2 shadow-[0px_4px_0px_#d7d7d7]"
           >
             <div className="col-span-2 mt-0 pt-0">
-              <div className={jetBrains.className}>
+              <div className={`${jetBrains.className} `}>
                 <input
                   type="text"
                   placeholder="NFT Name"
@@ -74,15 +74,28 @@ const CreateCampaignPage = () => {
                 />
               </div>
             </div>
-            <div className="items-center">
+            <label className="flex h-24 w-25 cursor-pointer items-center justify-center gap-1 rounded-lg text-center text-sm text-black bg-[#11a198]">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="h-6 w-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+            />
+          </svg>
+          <div>Upload</div>
               <input
                 type="file"
-                name=""
-                id=""
                 onChange={(e) => setNftImage(e.target.files[0])}
-                className="text-[15px] border-black border-2 flex flex-col items-end justify-center h-full w-[110px] bg-[#11a198] rounded-[9px]"
+                className="hidden"
               />
-            </div>
+            </label>
           </form>
           <label htmlFor="" className="text-xl w-full text-left pt-[18px]">
             <span className={jetBrains.className}>

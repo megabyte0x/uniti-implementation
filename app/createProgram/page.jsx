@@ -50,16 +50,34 @@ const CreateProgramPage = () => {
               value={description}
               className="h-36 w-full p-3 rounded-md border-black border-2 mt-2 mb-3 shadow-[0px_4px_0px_#d7d7d7]"
             />
-            <label htmlFor="" className="w-full text-left">
-              <span className={jetBrains.className}>Upload NFT Image</span>
-            </label>
-            <input
-              type="file"
-              name="Upload"
-              className={`${jetBrains.className}`}
-              onChange={(e) => setImage(e.target.files[0])}
-              id=""
+            <div className="flex w-full">
+              <div className="">
+                <span className={jetBrains.className}>Upload NFT Image</span>
+              </div>
+              <label className="flex w-36 ml-5 justify-center items-center cursor-pointer rounded-lg border-[2px] border-black border-solid">
+              <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="h-6 w-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
             />
+          </svg>
+          <div>Upload</div>
+                <input
+                  type="file"
+                  name="Upload"
+                  className={`${jetBrains.className} hidden`}
+                  onChange={(e) => setImage(e.target.files[0])}
+                />
+              </label>
+            </div>
           </div>
           {/* <input type="submit" value="Create" /> */}
         </form>
