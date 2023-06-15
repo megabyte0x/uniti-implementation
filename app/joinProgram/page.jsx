@@ -11,17 +11,20 @@ const JoinProgramPage = () => {
     store.programs.map((program) => program)
   );
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h1 className="text-3xl mb-[27px]"><span className={raleway.className}>Programs</span></h1>
-      <div className="grid grid-cols-2 justify-center items-center">
-        {programs.map((program) => (
-          <Program
-            name={program.programName}
-            description={program.programDescription}
-          />
-        ))}
+    <div>
+      <h1 className="text-3xl text-center mb-[27px]">
+        <span className={raleway.className}>Programs</span>
+      </h1>
+        <div className="grid grid-cols-2 gap-10 place-content-center mx-52">
+          {programs.map((program) => (
+            <Program
+              name={program.programName}
+              description={program.programDescription}
+              image={program.programImage}
+            />
+          ))}
+        </div>
       </div>
-    </div>
   );
 };
 

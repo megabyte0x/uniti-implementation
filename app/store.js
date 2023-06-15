@@ -85,6 +85,26 @@ const store =
         guidelines:
           "this is sample guidelines for the submission of goku nft and how to blah blah",
       },
+      {
+        program: "Polygon Leads",
+        campaignName: "Quest",
+        nftName: "Kurioai",
+        nftAmount: 10,
+        nftDescription: "this is a description for kurioai nft sample",
+        nftImage: '/ethglobal.jpeg',
+        guidelines:
+          "this is sample guidelines for the submission of goku nft and how to blah blah",
+      },
+      {
+        program: "Polygon Leads",
+        campaignName: "Quest2",
+        nftName: "Goku",
+        nftAmount: 10,
+        nftDescription: "this is a description for goku nft sample",
+        nftImage: '/ethglobal.jpeg',
+        guidelines:
+          "this is sample guidelines for the submission of goku nft and how to blah blah",
+      },
     ],
     addCampaign: (
       currentProgram,
