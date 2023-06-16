@@ -129,6 +129,8 @@ const store =
           },
         ],
       })),
+    currentCampaign: '',
+    changeCurrentCampaign: (name) => set((store) => ({ currentCampaign: name })),
     currentProgram: "Polygon Advocates",
     changeCurrentProgram: (name) => set((store) => ({ currentProgram: name })),
   });
