@@ -17,6 +17,9 @@ body {
   .green-btn {
     @apply bg-[#7dea95] px-3 py-3 mt-8 text-lg border-black border-2 rounded-[18px] hover:shadow-[8px_8px_0px_#000000] shadow-[4px_4px_0px_#000000];
   }
+  .red-btn {
+    @apply bg-[#E2442F] px-3 py-3 mt-8 text-lg border-black border-2 rounded-[18px] hover:shadow-[8px_8px_0px_#000000] shadow-[4px_4px_0px_#000000];
+  }
 }
 
 .hide {

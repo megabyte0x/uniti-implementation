@@ -17,9 +17,9 @@ const CampaignPage = () => {
     store.campaigns.filter((campaign) => campaign.campaignName == currentCampaign && campaign.program == currentProgram)
   );
 
-  console.log(currentCampaign)
-  console.log(campaign[0].campaignName)
-  console.log(currentProgram)
+  // console.log(currentCampaign)
+  // console.log(campaign[0].campaignName)
+  // console.log(currentProgram)
 
   return <div className="flex flex-col items-center justify-items-center h-full w-full">
     <h1 className="text-3xl -mt-[21px] mb-[45px] pb-[12px]"><span className={raleway.className}>{campaign[0].campaignName} Campaign </span></h1>
@@ -39,8 +39,9 @@ const CampaignPage = () => {
       </div>
     </div>
     <div className="grid grid-cols-2 w-full">
-      <h2 className="justify-self-start self-end mb-[15px] ml-[36px] text-2xl"><Link href="./program"><span className={jetBrains.className}>&lt; Back</span></Link></h2>
-      <div className="justify-self-end mr-[36px] mb-[0] mt-[45px]"><Button text="Submissions >" btnName="green-btn"></Button></div>
+      <h2 className="justify-self-start self-end mb-[15px] ml-[36px] text-2xl"><Link href="./program/campaign"><span className={jetBrains.className}>&lt; Back</span></Link></h2>
+      <div className="justify-self-end mr-[36px] mb-[0] mt-[45px]">
+        <Button text="Submissions >" btnName="green-btn" link='./program/campaign/submissions'></Button></div>
     </div>
   </div >;
 };
