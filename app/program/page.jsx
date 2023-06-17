@@ -5,6 +5,7 @@ import Campaign from "../components/Campaign";
 import { useStore } from "../store";
 import { Raleway } from "next/font/google";
 import { JetBrains_Mono } from "next/font/google";
+import Link from "next/link";
 
 const jetBrains = JetBrains_Mono({ weight: ["800"], subsets: ["cyrillic"] });
 const raleway = Raleway({ weight: ["600"], subsets: ["cyrillic"] });
@@ -52,11 +53,16 @@ const ProgramPage = () => {
         </div>
         {/* <Campaign /> */}
       </div>
-      <Button
-        btnName={'green-btn'}
-        text="Create Campaigns"
-        link="../program/createCampaign"
-      />
+      <div className="grid grid-cols-6 w-full">
+        <h2 className="justify-self-start self-end mb-[15px] ml-[36px] text-2xl col-span-1"><Link href="./joinProgram"><span className={jetBrains.className}>&lt; Back</span></Link></h2>
+        <div className="justify-self-end mr-[36px] mb-[12px] mt-[12px] col-span-5">
+          <Button
+            btnName={'green-btn'}
+            text="Create Campaigns"
+            link="../program/createCampaign"
+          />
+        </div>
+      </div>
     </div>
   );
 };

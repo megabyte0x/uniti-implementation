@@ -42,6 +42,7 @@ const CampaignPage = () => {
       <h2 className="justify-self-start self-end mb-[15px] ml-[36px] text-2xl"><Link href="./program"><span className={jetBrains.className}>&lt; Back</span></Link></h2>
       <div className="justify-self-end mr-[36px] mb-[0] mt-[45px]">
         <Button text="Submissions >" btnName="green-btn" link='./program/campaign/submissions'></Button></div>
+      {/* <Button text="Submit >" btnName="green-btn" link='./program/campaign/submit'></Button></div> */}
     </div>
   </div >;
 };
