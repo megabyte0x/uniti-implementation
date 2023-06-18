@@ -2,26 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  @apply bg-[#F1F333];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .connect-btn {
+    @apply py-3 bg-[#FF90E8] w-[200px] rounded-[20px] shadow-[9px_6px_0px_#000000] mr-[40px] uppercase;
+  }
+
+  .mainpage-btn {
+    @apply py-3 bg-[#F4F4F0] w-[293px] flex justify-center items-center rounded-[17px] shadow-[9px_8px_0px_#000000] mt-11 text-[25px];
+  }
+  .green-btn {
+    @apply bg-[#7dea95] px-3 py-3 mt-8 text-lg border-black border-2 rounded-[18px] hover:shadow-[8px_8px_0px_#000000] shadow-[4px_4px_0px_#000000];
+  }
+  .red-btn {
+    @apply bg-[#E2442F] px-3 py-3 mt-8 text-lg border-black border-2 rounded-[18px] hover:shadow-[8px_8px_0px_#000000] shadow-[4px_4px_0px_#000000];
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hide {
+  display: none;
+}
+
+.outline-title {
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }

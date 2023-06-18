@@ -1,0 +1,75 @@
+"use client";
+import React, { useState } from "react";
+import { useStore } from "../store.js";
+import { JetBrains_Mono } from "next/font/google";
+
+const jetBrains = JetBrains_Mono({ weight: ["500"], subsets: ["cyrillic"] });
+
+
+const ProgramForm = () => {
+  const visibility = useStore((store) => store.visibility);
+  var vis;
+  if (visibility == 1) {
+    vis = "show";
+  } else {
+    vis = "hide";
+  }
+
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+
+  const addProgram = useStore((store) => store.addProgram);
+  const changeVis = useStore((store) => store.changeVis);
+  const changeCurrentProgram = useStore((store) => store.changeCurrentProgram);
+  // console.log(name);
+  // const programs = useStore((store) => store.programs);
+  // console.log(programs);
+
+  return (
+    <div className={vis}>
+      <div className="flex flex-col items-center w-full">
+        <form action="#" className="w-full flex flex-col items-center justify-center mr-0">
+          <div className="formInput 
+                        w-[45%] h-[480px] -mt-20 px-14 py-9
+                        text-2xl
+                        flex flex-col items-center justify-center  
+                        bg-[#f4f4f0] border-black border-2 rounded-3xl
+                        shadow-[18px_18px_0px_#000000]">
+            <label htmlFor="" className="w-full text-left"><span className={jetBrains.className}>NFT Collection Name</span></label>
+            <input
+              type="text"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              className="h-16 w-full p-3 mt-2 mb-3
+                          rounded-md border-black border-2 shadow-[0px_4px_0px_#d7d7d7]"
+            />
+            <label htmlFor="" className="w-full text-left"><span className={jetBrains.className}>Description</span></label>
+            <input
+              type="textarea"
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
+              className="h-36 w-full p-3 rounded-md border-black border-2 mt-2 mb-3 shadow-[0px_4px_0px_#d7d7d7]"
+            />
+            <label htmlFor="" className="w-full text-left"><span className={jetBrains.className}>Upload NFT Image</span></label>
+            <input type="file" name="Upload" className={jetBrains.className} id="" />
+          </div>
+          {/* <input type="submit" value="Create" /> */}
+        </form>
+        <button
+          className="bg-[#7dea95] px-6 py-3 mt-[36px]
+                      text-2xl 
+                      border-black border-2 rounded-[18px] hover:shadow-[8px_6px_0px_#000000] shadow-[4px_3px_0px_#000000]"
+          onClick={() => {
+            addProgram(name, description);
+            changeCurrentProgram(name);
+            changeVis(2);
+          }}
+        >
+          <span className={jetBrains.className}>Create</span>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default ProgramForm;
